@@ -1,0 +1,31 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "Python 3",
+	"image": "mcr.microsoft.com/vscode/devcontainers/python:3.11",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python"
+			],
+			"settings": {
+				"editor.formatOnSave": true,
+				"editor.codeActionsOnSave": {
+					"source.organizeImports": true
+				},
+				"python.linting.enabled": true,
+				"python.linting.pylintEnabled": false,
+				"python.linting.flake8Enabled": true,
+				"python.linting.lintOnSave": true,
+				"python.linting.mypyEnabled": true,
+				"python.formatting.provider": "black",
+				"python.languageServer": "Pylance",
+				"python.linting.flake8Args": [
+					"--ignore=E501"
+				],
+				"python.pythonPath": "/usr/local/bin/python"
+			}
+		}
+	},
+	"postCreateCommand": "pip install -r requirements.txt"
+}
