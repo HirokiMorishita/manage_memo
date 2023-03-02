@@ -163,7 +163,6 @@ def get_attachment(base_url, id, file_path, pat):
 
 
 def add_label(base_url, id, label, pat, **_):
-
     url = f"{base_url}/rest/api/content/{id}/label"
     headers = {"Authorization": f"Bearer {pat}", "X-Atlassian-Token": "no-check"}
     label_json = {"prefix": "global", "name": label}
